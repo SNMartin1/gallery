@@ -2,11 +2,19 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <!--<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>-->
+    <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="vendors/angular.js"></script>
     <script type="text/javascript" src="scripts/client.js"></script>
     <title></title>
   </head>
-  <body>
-
+  <body ng-app="myApp">
+    <div ng-controller="GalleryController as gallery">
+      <h2>My Gallery</h2>
+    <div ng-click="gallery.changeDisplay(picture)" class="picGallery" ng-repeat="picture in gallery.picture">
+      <img ng-show="picture.display" ng-src="{{picture.src}}?size=80" alt="{{picture.description}}">
+      <p ng-hide="picture.display">{{picture.description}}</p>
+    </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,10 @@
+.picGallery {
+  height: 400px;
+  width: 260px;
+  background-color: lightgray;
+  display: inline-block;
+}
+
+img {
+  max-width: 250px;
+}
