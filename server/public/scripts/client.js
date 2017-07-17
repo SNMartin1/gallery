@@ -7,8 +7,7 @@ myApp.controller('GalleryController', function() {
   var gallery = this;
   console.log(this);
 
-  //gallery.pictures = [];
-  //gallery.addPicture = function(src, description, likes, likeButton) {
+//array of picture objects for gallery
     gallery.picture = [
       {
         src: '/images/Cinderella-castle.jpg',
@@ -27,6 +26,24 @@ myApp.controller('GalleryController', function() {
         description: "Toystory ride",
         likes: 0,
         display: true
+      },
+      {
+        src: '/images/mainstreet.jpg',
+        description: "Main Street decorated for Christmas",
+        likes: 0,
+        display: true
+      },
+      {
+        src: '/images/magicband.jpg',
+        description: "Magic Band with Color By Amber Jewelry",
+        likes: 0,
+        display: true
+      },
+      {
+        src: '/images/stitch.jpg',
+        description: "Stitch!!",
+        likes: 0,
+        display: true
       }
     ];
 
@@ -39,5 +56,5 @@ myApp.controller('GalleryController', function() {
 
     gallery.likeButton = function(picture) {
       picture.likes +=1;
-    }
+    };
 }); //gallery controller function end

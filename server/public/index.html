@@ -2,14 +2,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <!--<link rel="stylesheet" type="text/css" href="bootstrap.min.css"/>-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="vendors/bootstrap.css"/>
+    <link rel="stylesheet" href="vendors/bootstrap-theme.css">
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="vendors/angular.js"></script>
     <script type="text/javascript" src="scripts/client.js"></script>
     <title></title>
   </head>
   <body ng-app="myApp">
-    <h2>My Gallery</h2>
+    <div class="container">
+    <h2>DisneyWorld 2017</h2>
     <div ng-controller="GalleryController as gallery">
       <div class="bigDiv" ng-repeat="picture in gallery.picture">
 
@@ -21,5 +27,6 @@
           <p>{{picture.likes}}</p>
       </div>
     </div>
+  </div>
   </body>
 </html>
