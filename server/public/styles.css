@@ -1,10 +1,27 @@
-.picGallery {
-  height: 400px;
+.bigDiv {
+  height: 450px;
   width: 260px;
+  background-color: lightgray;
+  display: inline-block;
+  text-align: center;
+}
+
+.picGallery {
+  max-width: 250px;
+  max-height: 333px;
+  padding: 10px;
   background-color: lightgray;
   display: inline-block;
 }
 
 img {
   max-width: 250px;
+  max-height: 333px;
+  padding: 10px;
+}
+
+#descript {
+  width: 250px;
+  height: 333px;
+
 }

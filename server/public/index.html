@@ -9,12 +9,17 @@
     <title></title>
   </head>
   <body ng-app="myApp">
+    <h2>My Gallery</h2>
     <div ng-controller="GalleryController as gallery">
-      <h2>My Gallery</h2>
-    <div ng-click="gallery.changeDisplay(picture)" class="picGallery" ng-repeat="picture in gallery.picture">
-      <img ng-show="picture.display" ng-src="{{picture.src}}?size=80" alt="{{picture.description}}">
-      <p ng-hide="picture.display">{{picture.description}}</p>
-    </div>
+      <div class="bigDiv" ng-repeat="picture in gallery.picture">
+
+        <div class="picGallery" ng-click="gallery.changeDisplay(picture)">
+          <img ng-show="picture.display" ng-src="{{picture.src}}" alt="{{picture.description}}">
+          <p id="descript" ng-hide="picture.display">{{picture.description}}</p>
+        </div>
+          <button ng-click="gallery.likeButton(picture)" type="button" name="button">Like</button>
+          <p>{{picture.likes}}</p>
+      </div>
     </div>
   </body>
 </html>

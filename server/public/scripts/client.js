@@ -14,21 +14,18 @@ myApp.controller('GalleryController', function() {
         src: '/images/Cinderella-castle.jpg',
         description: "Cinderella's Castle",
         likes: 0,
-        likeButton: false,
         display: true
       },
       {
         src: '/images/epcot.jpg',
         description: "Epcot at night",
         likes: 0,
-        likeButton: false,
         display: true
       },
       {
         src: '/images/toystoreride.jpg',
         description: "Toystory ride",
         likes: 0,
-        likeButton: false,
         display: true
       }
     ];
@@ -39,4 +36,8 @@ myApp.controller('GalleryController', function() {
     gallery.changeDisplay = function(picture) {
       picture.display = !picture.display;
     };
+
+    gallery.likeButton = function(picture) {
+      picture.likes +=1;
+    }
 }); //gallery controller function end
